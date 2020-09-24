@@ -4,8 +4,8 @@ import { StyleSheet, Text, View, TouchableOpacity, Alert } from 'react-native';
 const Navbar = ({navigation, route}) => {
     //const [value, onChangeText] = React.useState('Useless Placeholder');
     const params = route.params
-    const goTo = title => {
-        navigation.navigate('Person', {title: title})
+    const goTo = (title, gender) => {
+        navigation.navigate('Person', {title, gender})
     }
     return (
         <View style={styles.container}>
@@ -15,19 +15,19 @@ const Navbar = ({navigation, route}) => {
             </View>
             
         <View style={styles.navrow}>
-      <TouchableOpacity style={styles.box} onPress={() => goTo('Desola')}> 
+      <TouchableOpacity style={styles.box} onPress={() => goTo('Desola','girl')}> 
           <Text style={styles.navtext}> Desola </Text>
           
       </TouchableOpacity>
-      <TouchableOpacity style={styles.box} onPress={() => goTo('Demilade')}> 
+      <TouchableOpacity style={[styles.box, {backgroundColor:'#3B9CB1'}]} onPress={() => goTo('Demilade', 'boy')}> 
           <Text style={styles.navtext}> Demilade </Text>
       </TouchableOpacity>
       </View>
       <View style={styles.navrow}>
-      <TouchableOpacity style={styles.box} onPress={() => goTo('Demola')}> 
+      <TouchableOpacity style={[styles.box, {backgroundColor:'#3B9CB1'}]} onPress={() => goTo('Demola', 'boy')}> 
           <Text style={styles.navtext}> Demola </Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.box} onPress={() => goTo('Deja')}> 
+      <TouchableOpacity style={styles.box} onPress={() => goTo('Deja', 'girl')}> 
           <Text style={styles.navtext}> Deja </Text>
       </TouchableOpacity>
       </View>
@@ -35,7 +35,7 @@ const Navbar = ({navigation, route}) => {
       <TouchableOpacity style={styles.box}> 
           <Text style={styles.navtext}> Desire </Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.box}> 
+      <TouchableOpacity style={[styles.box, {backgroundColor:'#3B9CB1'}]}> 
           <Text style={styles.navtext}> Debola </Text>
       </TouchableOpacity>
       </View>
@@ -45,7 +45,7 @@ const Navbar = ({navigation, route}) => {
 
 const styles = StyleSheet.create({
     board: {
-      backgroundColor: 'orange',
+      backgroundColor: '#EDBFD4',
       padding: 10,
       flexDirection: 'row',
       flex: 0.5,
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
 
     container: {
         flex: 1,
-        backgroundColor: '#0E5ACC',
+        backgroundColor: '#E2568B',
         marginTop:30
     },
     navrow: {
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
 
     greeting: {
         textAlign: "left",
-        color: "blue",
+        color: "#3B9CB1",
         paddingLeft: 10,
         flex: 2,
         fontWeight: 'bold',
