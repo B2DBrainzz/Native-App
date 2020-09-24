@@ -17,7 +17,7 @@ export class Header extends React.Component {
      this.setState({
         isLoggedIn: !this.state.isLoggedIn
      })
-     this.props.navigation.navigate('Navbar')
+     this.props.navigation.navigate('Navbar',{name: this.state.email})
  }
 
  onChangeText = obj => {
@@ -29,11 +29,11 @@ export class Header extends React.Component {
      })
 }
  render() {
-     let display = this.state.isLoggedIn? 'LOGOUT' : 'LOGIN'
+     let display = this.state.isLoggedIn? 'LOGIN' : 'LOGIN'
      return(
         <View style={styles.container}>
         <Logo /> 
-        <Text style={styles.login}>Welcome to Bee's App</Text>
+        <Text style={styles.login}>La Familie App</Text>
          <View style={styles.buttonView}>
              <TextInput
               style={ styles.input}
