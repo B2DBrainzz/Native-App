@@ -19,12 +19,12 @@ const Navbar = ({navigation, route}) => {
           <Text style={styles.navtext}> Desola </Text>
           
       </TouchableOpacity>
-      <TouchableOpacity style={[styles.box, {backgroundColor:'#3B9CB1'}]} onPress={() => goTo('Demilade', 'boy')}> 
+      <TouchableOpacity style={[styles.box, {backgroundColor:'#2296F3'}]} onPress={() => goTo('Demilade', 'boy')}> 
           <Text style={styles.navtext}> Demilade </Text>
       </TouchableOpacity>
       </View>
       <View style={styles.navrow}>
-      <TouchableOpacity style={[styles.box, {backgroundColor:'#3B9CB1'}]} onPress={() => goTo('Demola', 'boy')}> 
+      <TouchableOpacity style={[styles.box, {backgroundColor:'#2296F3'}]} onPress={() => goTo('Demola', 'boy')}> 
           <Text style={styles.navtext}> Demola </Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.box} onPress={() => goTo('Deja', 'girl')}> 
@@ -35,7 +35,7 @@ const Navbar = ({navigation, route}) => {
       <TouchableOpacity style={styles.box}> 
           <Text style={styles.navtext}> Desire </Text>
       </TouchableOpacity>
-      <TouchableOpacity style={[styles.box, {backgroundColor:'#3B9CB1'}]}> 
+      <TouchableOpacity style={[styles.box, {backgroundColor:'#2296F3'}]}> 
           <Text style={styles.navtext}> Debola </Text>
       </TouchableOpacity>
       </View>
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
 
     greeting: {
         textAlign: "left",
-        color: "#3B9CB1",
+        color: "#2296F3",
         paddingLeft: 10,
         flex: 2,
         fontWeight: 'bold',

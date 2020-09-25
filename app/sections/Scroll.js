@@ -21,7 +21,7 @@ export class Header extends React.Component {
  }
 
  onChangeText = obj => {
-     obj.email?
+     obj.hasOwnProperty("email")?
     this.setState({
         email: obj.email
      }) : this.setState({

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Alert } from 'react-native';
+import Upload from './Upload';
 
 const Person = ({navigation, route}) => {
     const title = route.params.title
@@ -28,9 +29,7 @@ const Person = ({navigation, route}) => {
       </TouchableOpacity>
         </View>
         <View>
-            <Text>
-                {current}
-            </Text>
+            {current == 'upload' && < Upload title={title} />}
         </View>
         </View>
     )
@@ -43,7 +42,8 @@ const styles = StyleSheet.create({
 
   bar: {
      flex: 0.1,
-     flexDirection: 'row'
+     flexDirection: 'row', 
+     marginBottom: 50
   },
   navtext: {
     fontSize: 20,
